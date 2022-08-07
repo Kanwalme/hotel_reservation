@@ -26,27 +26,22 @@ function submitHandler(e) {
         checkOut: checkOut.value
     }
 
-    createReservation(bodyObj)
+    // createReservation(bodyObj)
 
-    name.value = ''
-    checkIn.value = ''
-    checkOut.value = ''
+    // name.value = ''
+    // checkIn.value = ''
+    // checkOut.value = ''
 }
-function createHouseCard(house) {
-    const houseCard = document.createElement('div')
-    houseCard.classList.add('house-card')
+function createHotelCard(hotel) {
+    const hotelCard = document.createElement('div')
 
-    houseCard.innerHTML = `<img alt='house cover image' src=${house.imageURL} class="house-cover-image"/>
-    <p class="address">${house.address}</p>
+    hotelCard.innerHTML = `<img alt='hotel cover image' src=${hotel.imageURL} class="hotel-cover-image"/>
+    <p class="name">${house.address}</p>
     <div class="btns-container">
-        <button onclick="updateHouse(${house.id}, 'minus')">-</button>
         <p class="house-price">$${house.price}</p>
-        <button onclick="updateHouse(${house.id}, 'plus')">+</button>
     </div>
     <button onclick="deleteHouse(${house.id})">delete</button>
     `
-
-
     housesContainer.appendChild(houseCard)
 }
 
