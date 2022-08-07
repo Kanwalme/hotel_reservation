@@ -1,12 +1,12 @@
 const hotelContainer = document.querySelector('#hotel-container')
 const form = document.querySelector('form')
 
-const baseURL = `http://localhost:4004/api/houses`
+const baseURL = `http://localhost:4004/api/hotels`
 
 const hotelCallback = ({ data: rooms }) => displayroom(rooms)
 const errCallback = err => console.log(err)
 
-const getAllrooms = () => axios.get(baseURL).then(hotelCallback).catch(errCallback)
+const getAllhotels = () => axios.get(baseURL).then(hotelCallback).catch(errCallback)
 const createreservation = body => axios.post(baseURL, body).then(hotelCallback).catch(errCallback)
 const deletereservation = id => axios.delete(`${baseURL}/${id}`).then(hotelCallback).catch(errCallback)
 
@@ -27,7 +27,7 @@ function submitHandler(e) {
         checkOut: checkOut.value
     }
 
-    createHouse(bodyObj)
+    createReservation(bodyObj)
 
     name.value = ''
     email.value = ''
