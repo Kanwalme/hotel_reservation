@@ -7,7 +7,7 @@
     text-align: center;
 }
   body {
-    background-color: white;
+    background-color: #F0EAD6;
   }
   
 
@@ -19,7 +19,7 @@
   form {
     width: 400px;
     height: 400px;
-    background-color: rgb(131, 143, 147);
+    /* background-color: rgb(131, 143, 147); */
     position: relative;
     display: flex; 
     flex-direction: column;
@@ -39,13 +39,11 @@
 
   button {
     border: none;
-    background-color: hsl(360, 91%, 36%);
+    background-color: #8e0404;
     border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-      0px;
-    color: hsl(0, 0%, 100%);
+    color: #FFFFFF;
     display: inline-block;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 22px;
     margin: 16px 16px 16px 20px;
     padding: 14px 34px;
@@ -60,5 +58,35 @@
     border: none;
     border: 2px solid #232323; 
     color: #232323;
-    background-color: whitesmoke;
+    background-color: #FFFFFF;
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: #FFFFFF;
+  }
+  
+  .topnav a {
+    float: right;
+    color: #8e0404;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #FFFFFF;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #8e0404;
+    color: #FFFFFF;
+  }
+
+  .topnav a.hotelName {
+    color: #8e0404;
+    float: left;
+    font-size: 22px;
   }

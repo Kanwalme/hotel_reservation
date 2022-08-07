@@ -35,15 +35,4 @@ function submitHandler(e) {
     checkOut.value = ''
 }
 
-// let btn = document.getElementById('btnSearch');
-// let image = document.getElementById('image')
 
-// btn.addEventListener('click', function () {
-//     GET("https://travelpartner.googleapis.com/hotelViews:summarize")
-//         .then(res => res.json())
-//         .then(result => {
-//             console.log(ersult)
-//             image.src = result.message
-//         })
-//         .catch(err => console.log(err))
-// })
