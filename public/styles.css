@@ -26,15 +26,8 @@
     align-items: center;
     margin: 30px;
   }
-  
-  /* button {
-    background-color: #232323;
-    width: 80px;
-    height: 30px;
-    color: white;
-    border: none;
-    margin: 5px;
-  } */
+
+  /* Search bar */
 
   button {
     border: none;
@@ -64,6 +57,8 @@
     color: #232323;
     background-color: #FFFFFF;
   }
+
+    /* Navbar */
 
   .topnav {
     overflow: hidden;
