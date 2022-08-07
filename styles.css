@@ -19,7 +19,6 @@
   form {
     width: 400px;
     height: 400px;
-    /* background-color: rgb(131, 143, 147); */
     position: relative;
     display: flex; 
     flex-direction: column;
@@ -80,13 +79,6 @@
     background-color: #FFFFFF;
     color: black;
   }
-  
-  /* .topnav a.active {
-    background-color: #8e0404;
-    color: #FFFFFF;
-    padding: 16px 16px;
-
-  } */
 
   .logo {
     text-align: left;
