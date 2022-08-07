@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,55 +11,43 @@
 
 <body>
     <div class="topnav">
-        <a class="active" href="#login">Login</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a class="hotelName">RestInn Hotel</a>
-      </div> 
-    <div class ="heading">
+        <img class="logo" src="restInnLogo.png">
+            <a class="active" href="#login">Login</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+    </div>
+    <div class="heading">
         <h1>RestInn Hotel</h1>
         <p>*****Book your stay here!*****</p>
         <main>
-        <form>
-            <input 
-                type='text'
-                id="name"
-                placeholder="Going to"/>
+            <form>
+                <input type='text' id="name" placeholder="Going to" />
                 <!-- <input 
                 type='text'
                 id="email"
                 placeholder='Email address'/> -->
-            <p>Check In:</p>
-            <input 
-            type="date" 
-            id="checkIn" 
-            name="checkIn"
-            value="2022-08-04"
-            min="2022-01-01" max="2022-12-31">
-            <p>Check Out:</p>
-            <input 
-            type="date" 
-            id="checkOut" 
-            name="checkOut"
-            value="2022-08-04"
-            min="2022-01-01" max="2022-12-31">
-        <p>Number of Guests</p>
-        <select name = "guests">
-            <option value = "1" selected>1</option>
-            <option value = "2">2</option>
-            <option value = "3">3</option>
-            <option value = "4">4</option>
-         </select>
-            <button id="btnSearch">Search</button>
-        </form>
-        <img id="image">
+                <p>Check In:</p>
+                <input type="date" id="checkIn" name="checkIn" value="2022-08-04" min="2022-01-01" max="2022-12-31">
+                <p>Check Out:</p>
+                <input type="date" id="checkOut" name="checkOut" value="2022-08-04" min="2022-01-01" max="2022-12-31">
+                <p>Number of Guests</p>
+                <select name="guests">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <button id="btnSearch">Search</button>
+            </form>
+            <img id="image">
 
-        <section id="hotel-container"></section>
+            <section id="hotel-container"></section>
 
-    </main>
+        </main>
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>

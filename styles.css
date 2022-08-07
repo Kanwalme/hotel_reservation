@@ -70,7 +70,8 @@
     float: right;
     color: #8e0404;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px;
+    padding-top: 22px;
     text-decoration: none;
     font-size: 17px;
   }
@@ -80,13 +81,14 @@
     color: black;
   }
   
-  .topnav a.active {
+  /* .topnav a.active {
     background-color: #8e0404;
     color: #FFFFFF;
-  }
+    padding: 16px 16px;
 
-  .topnav a.hotelName {
-    color: #8e0404;
-    float: left;
-    font-size: 22px;
+  } */
+
+  .logo {
+    text-align: left;
+    text-align: center;
   }
