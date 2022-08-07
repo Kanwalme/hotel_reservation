@@ -24,7 +24,9 @@
     <div class="heading">
         <main>
             <form>
-                <input type='text' id="name" placeholder="Going to" />
+                <div>
+                    <input type='text' id="name" placeholder="Going to" />
+                </div>
                 <p>Check In:</p>
                 <input type="date" id="checkIn" name="checkIn" value="2022-08-04" min="2022-01-01" max="2022-12-31">
                 <p>Check Out:</p>
@@ -37,11 +39,18 @@
                     <option value="4">4</option>
                 </select>
                 <button id="btnSearch">Search</button>
+                <div>
+                    {$string interpolation}
+                </div>
+
             </form>
         </main>
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
 </body>
+
+
+</div>
 
 </html>
