@@ -2,6 +2,7 @@
   "hotelName": "RestInn Hotel",
   "destinations": [
     {
+      "id": 1,
       "location": "Las Vegas, NV",
       "pricePernight": 512,
       "imageURL": "https://cdn.britannica.com/96/115096-050-5AFDAF5D/Bellagio-Hotel-Casino-Las-Vegas.jpg"
