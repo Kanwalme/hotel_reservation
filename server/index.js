@@ -14,4 +14,4 @@ const {
 app.get(`/api/hotels`, getHotels)
 app.delete(`/api/hotels/:id`, deleteHotel)
 
-app.listen(4004, () => console.log(`running on 4004`))
+app.listen(4005, () => console.log(`running on 4005`))

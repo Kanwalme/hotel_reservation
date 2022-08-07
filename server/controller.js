@@ -1,5 +1,5 @@
 const hotels = require('./db.json')
-let globalId = 4
+let globalId = 9
 
 module.exports = {
     getHotels: (req, res) => res.status(200).send(hotels),

@@ -1,7 +1,7 @@
 const hotelContainer = document.querySelector('#hotel-container')
 const form = document.querySelector('form')
 
-const baseURL = `http://localhost:4004/api/hotels`
+const baseURL = `http://localhost:4005/api/hotels`
 
 const hotelCallback = ({ data: rooms }) => displayroom(rooms)
 const errCallback = err => console.log(err)
