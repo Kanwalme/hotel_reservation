@@ -10,7 +10,6 @@
     background-color: #F0EAD6;
   }
   
-
   main {
     display: flex; 
     justify-content: center;
@@ -26,15 +25,6 @@
     align-items: center;
     margin: 30px;
   }
-  
-  /* button {
-    background-color: #232323;
-    width: 80px;
-    height: 30px;
-    color: white;
-    border: none;
-    margin: 5px;
-  } */
 
   button {
     border: none;

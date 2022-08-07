@@ -1,7 +1,7 @@
 const hotelContainer = document.querySelector('#hotel-container')
 const form = document.querySelector('form')
 
-const baseURL = `http://localhost:4005/api/hotels`
+const baseURL = `http://localhost:4004/api/hotels`
 
 const hotelCallback = ({ data: rooms }) => displayroom(rooms)
 const errCallback = err => console.log(err)
@@ -14,15 +14,14 @@ function submitHandler(e) {
     e.preventDefault()
 
     let name = document.querySelector('#name')
-    let email = document.querySelector('#email')
     let checkIn = document.querySelector('#checkIn')
     let checkOut = document.querySelector('#checkOut')
+    let getAllHotels = document.querySelector('#btnSearch')
 
 
 
     let bodyObj = {
         name: name.value,
-        email: email.value,
         checkIn: checkIn.value,
         checkOut: checkOut.value
     }
@@ -30,9 +29,35 @@ function submitHandler(e) {
     createReservation(bodyObj)
 
     name.value = ''
-    email.value = ''
     checkIn.value = ''
     checkOut.value = ''
 }
+function createHouseCard(house) {
+    const houseCard = document.createElement('div')
+    houseCard.classList.add('house-card')
 
+    houseCard.innerHTML = `<img alt='house cover image' src=${house.imageURL} class="house-cover-image"/>
+    <p class="address">${house.address}</p>
+    <div class="btns-container">
+        <button onclick="updateHouse(${house.id}, 'minus')">-</button>
+        <p class="house-price">$${house.price}</p>
+        <button onclick="updateHouse(${house.id}, 'plus')">+</button>
+    </div>
+    <button onclick="deleteHouse(${house.id})">delete</button>
+    `
+
+
+    housesContainer.appendChild(houseCard)
+}
+
+function displayHouses(arr) {
+    housesContainer.innerHTML = ``
+    for (let i = 0; i < arr.length; i++) {
+        createHouseCard(arr[i])
+    }
+}
+
+form.addEventListener('submit', submitHandler)
+
+getAllHouses()
 
