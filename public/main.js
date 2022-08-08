@@ -1,7 +1,18 @@
 const hotelContainer = document.querySelector('#hotel-container')
 const form = document.querySelector('form')
 
-const baseURL = `http://localhost:4004/api/hotels`
+async function populate() {
+
+    const requestJSON = '../server/db.json';
+    const request = new Request(requestJSON);
+
+    const response = await fetch(request);
+    const hotelDestinations = await response.json();
+
+    populateHotels(hotelDestinations);
+}
+
+const baseURL = `http://localhost:4005/api/hotels`
 
 const hotelCallback = ({ data: rooms }) => displayroom(rooms)
 const errCallback = err => console.log(err)
@@ -14,51 +25,52 @@ function submitHandler(e) {
     e.preventDefault()
 
     let name = document.querySelector('#name')
+    let email = document.querySelector('#email')
     let checkIn = document.querySelector('#checkIn')
     let checkOut = document.querySelector('#checkOut')
-    let getAllHotels = document.querySelector('#btnSearch')
 
 
 
     let bodyObj = {
         name: name.value,
+        email: email.value,
         checkIn: checkIn.value,
         checkOut: checkOut.value
     }
 
-    // createReservation(bodyObj)
+    createReservation(bodyObj)
 
-    // name.value = ''
-    // checkIn.value = ''
-    // checkOut.value = ''
+    name.value = ''
+    email.value = ''
+    checkIn.value = ''
+    checkOut.value = ''
 }
 function createHotelCard(hotel) {
     const hotelCard = document.createElement('div')
+    
 
-    hotelCard.innerHTML = `<img alt='hotel cover image' src=${hotel.imageURL} class="hotel-cover-image"/>
-    <p class="name">${house.address}</p>
+    houseCard.innerHTML = `<img alt='hotel cover image' src=${hotel.imageURL} class="hotel-cover-image"/>
+    <p class="location">${hotel.location}</p>
     <div class="btns-container">
-        <p class="house-price">$${house.price}</p>
+        <p class="hotel-price">$${hotel.price}</p>
     </div>
-    <button onclick="deleteHouse(${house.id})">delete</button>
+    <button onclick="deleteHotel(${hotel.id})">delete</button>
     `
-    housesContainer.appendChild(houseCard)
+
+
+    hotelContainer.appendChild(hotelCard)
 }
 
 function displayHouses(arr) {
-    housesContainer.innerHTML = ``
+    hotelContainer.innerHTML = ``
     for (let i = 0; i < arr.length; i++) {
-        createHouseCard(arr[i])
+        createHotelCard(arr[i])
     }
 }
 
 form.addEventListener('submit', submitHandler)
 
-fetch("/server/db.json")
-    .then(function (resp) {
-        return resp.json()
-    })
-    .then(function (data) {
-        console.log(data.id)
-    })
+getAllhotels()
+
+
 
