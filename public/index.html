@@ -24,8 +24,19 @@
     <div class="heading">
         <main>
             <form>
-                <div>
-                    <input type='text' id="name" placeholder="Going to" />
+                <div class="custom-select" style="width: 200px;"">
+                    <p>Choose a location:</p>
+                    <select name="location" id="name">
+                        <option value="1" selected>Las Vegas, NV</option>
+                        <option value="2">Big Sur, CA</option>
+                        <option value="3">Vail, CO</option>
+                        <option value="4">Washington, CT</option>
+                        <option value="5">Sea Island, GA</option>
+                        <option value="6">Coeur d'Alene, ID</option>
+                        <option value="7">Davenport, IA</option>
+                        <option value="8">New Orleans, LA</option>
+                        <option value="9">Santa Fe, NM</option>
+                    </select>
                 </div>
                 <p>Check In:</p>
                 <input type="date" id="checkIn" name="checkIn" value="2022-08-04" min="2022-01-01" max="2022-12-31">
@@ -39,13 +50,21 @@
                     <option value="4">4</option>
                 </select>
                 <button id="btnSearch">Search</button>
-                <div>
-                    {$string interpolation}
-                </div>
+            
+<h1>
 
-            </form>
+</h1>
+
+<section>
+    
+</section>
+            </form>   
+
+
         </main>
-    </div>
+     
+    </div> 
+   
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
 </body>
