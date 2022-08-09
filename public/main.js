@@ -76,11 +76,9 @@
 
 async function populate() {
 
-    const requestJSON = '../server/db.json';
-   
-    const request = new Request(requestJSON);
+   const requestUrl = 'http://localhost:4004/api/hotels'
     
-    const response = await fetch(request);
+    const response = await fetch(requestUrl);
     const hotelDestinations = await response.json();
     
     populateHotels(hotelDestinations);
