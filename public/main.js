@@ -68,9 +68,10 @@ function displayHouses(arr) {
     }
 }
 
-form.addEventListener('submit', submitHandler)
+form.addEventListener('nav', submitHandler)
 
 getAllhotels()
+
 
 
 
