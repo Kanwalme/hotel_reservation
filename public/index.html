@@ -2,74 +2,67 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Hotel Reservation</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Hotel Reservation</title>
 </head>
 
 <body>
 
-    <div class="topnav">
-        <!-- Navbar -->
-        <!-- logo created on https://www.freelogodesign.org/ -->
-        <img class="logo" src="restInnLogo.png">
-        <a class="active" href="#login">Login</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-    </div>
+  <div class="topnav">
+    <!-- Navbar -->
+    <!-- logo created on https://www.freelogodesign.org/ -->
+    <img class="logo" src="restInnLogo.png">
+    <a class="active" href="#login">Login</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="/reservation">Reservations</a>
+    <a href="http://localhost:4004">Home Page</a>
+  </div>
 
-    <div class="heading">
-        <main>
-            <!-- <form>
-                <div>
-                    <input type='text' id="name" placeholder="Going to" />
-                </div>
-                <p>Check In:</p>
-                <input type="date" id="checkIn" name="checkIn" value="2022-08-04" min="2022-01-01" max="2022-12-31">
-                <p>Check Out:</p>
-                <input type="date" id="checkOut" name="checkOut" value="2022-08-04" min="2022-01-01" max="2022-12-31">
-                <p>Number of Guests</p>
-                <select name="guests">
-                    <option value="1" selected>1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-                <button id="btnSearch">Search</button>
-                <div>
-                    {$string interpolation}
-                </div>
-            </form> -->
+  <!-- <div class="reservationForm"> -->
+    <main>
+      <form action="javascript:submitForm(event)">
+        <div class="custom-select">
+                    <p>Choose a location:</p>
+          <select name='location' id=" name">
+          <option value="0" selected>Las Vegas, NV</option>
+          <option value="1">Big Sur, CA</option>
+          <option value="2">Vail, CO</option>
+          <option value="3">Washington, CT</option>
+          <option value="4">Sea Island, GA</option>
+          <option value="5">Coeur d'Alene, ID</option>
+          <option value="6">Davenport, IA</option>
+          <option value="7">New Orleans, LA</option>
+          <option value="8">Santa Fe, NM</option>
+          </select>
+        </div>
+        <p>Check In:</p>
+        <input type="date" id="checkIn" name="checkIn" value="2022-08-04" min="2022-01-01" max="2022-12-31">
+        <p>Check Out:</p>
+        <input type="date" id="checkOut" name="checkOut" value="2022-08-04" min="2022-01-01" max="2022-12-31">
+        <p>Number of Guests</p>
+        <select name="guests">
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <br>
+        <button id="btnSearch" type="submit">Search</button>
 
-            <nav>
-                <label for="touch"><span>Select A Destination</span></label>
-                <input type="checkbox" id="touch">
-                <ul class="slide">
-                    <li><a href="#">Las Vegas, NV</a></li>
-                    <li><a href="#">Big Sur, CA</a></li>
-                    <li><a href="#">Vail, CO</a></li>
-                    <li><a href="#">Sea Island, GA</a></li>
-                    <li><a href="#">Coeur d'Alene, ID</a></li>
-                    <li><a href="#">Davenport, IA</a></li>
-                    <li><a href="#">New Orleans, LA</a></li>
-                    <li><a href="#">Santa Fe, NM</a></li>
-                </ul>
-            </nav>
-        </main>
-<script>
-    
-</script>
+      </form>
 
-    </div>
+    </main>
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="main.js"></script>
+    <section id="hotels"></section>
+  <!-- </div> -->
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="main.js"></script>
 </body>
-
 
 </div>
 

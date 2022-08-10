@@ -16,7 +16,7 @@
     {
       "id": 3,
       "location": "Vail, CO",
-      "price": 199,
+      "pricePernight": 199,
       "imageURL": "https://i.insider.com/54862606ecad04397fe3dc51?width=700&format=jpeg&auto=webp"
     },
     {
@@ -27,33 +27,34 @@
     },
     {
       "id": 5,
-      "address": "Sea Island, GA",
+      "location": "Sea Island, GA",
       "pricePernight": 500,
       "imageURL": "https://i.insider.com/548626a069bedd1926e3dc48?width=700&format=jpeg&auto=webp"
     },
     {
       "id": 6,
       "location": "Coeur d'Alene, ID",
-      "price": 139,
+      "pricePernight": 139,
       "imageURL": "https://i.insider.com/548212f5ecad04f3358b4567?width=700&format=jpeg&auto=webp"
     },
     {
       "id": 7,
-      "address": "Davenport, IA",
+      "location": "Davenport, IA",
       "pricePernight": 169,
       "imageURL": "https://i.insider.com/5486271969bedd9c2ae3dc47?width=700&format=jpeg&auto=webp"
     },
     {
       "id": 8,
       "location": "New Orleans, LA",
-      "price": 250,
+      "pricePernight": 250,
       "imageURL": "https://i.insider.com/548627586bb3f7c407e3dc4b?width=700&format=jpeg&auto=webp"
     },
     {
       "id": 9,
       "location": "Santa Fe, NM",
-      "price": 465,
+      "pricePernight": 465,
       "imageURL": "https://i.insider.com/547e30bc6bb3f7867a6044d2?width=700&format=jpeg&auto=webp"
     }
   ]
 }
+
