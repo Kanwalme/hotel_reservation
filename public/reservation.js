@@ -9,7 +9,7 @@ document.addEventListener(
       })
       console.log(data)
       data.forEach(reservation => {
-        const mytr = document.createElement('tr')
+        const tableContents = document.createElement('tr')
         const dataAttrs = [
           { name: 'id', value: 'reservation.id' },
           {
@@ -29,16 +29,16 @@ document.addEventListener(
         dataAttrs.forEach(({ name, value }) => {
           const mytd = document.createElement('td')
           mytd.textContent = eval(value)
-          mytr.appendChild(mytd)
+          tableContents.appendChild(mytd)
         })
-        const mytd = document.createElement('td')
-        const myButton = document.createElement('button')
-        myButton.textContent = 'Delete'
-        myButton.id = reservation.id
-        myButton.addEventListener('click', deleteReservation, false)
-        mytd.appendChild(myButton)
-        mytr.appendChild(mytd)
-        table.appendChild(mytr)
+        const reservationTable = document.createElement('td')
+        const deleteButton = document.createElement('button')
+        deleteButton.textContent = 'Delete'
+        deleteButton.id = reservation.id
+        deleteButton.addEventListener('click', deleteReservation, false)
+        reservationTable.appendChild(deleteButton)
+        tableContents.appendChild(reservationTable)
+        table.appendChild(tableContents)
       })
     },
     false

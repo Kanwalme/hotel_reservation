@@ -16,16 +16,16 @@
     <!-- logo created on https://www.freelogodesign.org/ -->
     <img class="logo" src="restInnLogo.png">
     <a class="active" href="#login">Login</a>
-    <a href="#news">News</a>
     <a href="#contact">Contact</a>
     <a href="#about">About</a>
     <a href="/reservation">Reservations</a>
+    <a href="http://localhost:4004">Home Page</a>
   </div>
 
-  <div class="heading">
+  <!-- <div class="reservationForm"> -->
     <main>
       <form action="javascript:submitForm(event)">
-        <div class="custom-select" style="width: 200px;"">
+        <div class="custom-select">
                     <p>Choose a location:</p>
           <select name='location' id=" name">
           <option value="0" selected>Las Vegas, NV</option>
@@ -50,17 +50,15 @@
           <option value="3">3</option>
           <option value="4">4</option>
         </select>
+        <br>
         <button id="btnSearch" type="submit">Search</button>
 
-        </h1>
       </form>
 
     </main>
 
-    <section>
-      <div id="hotels"></div>
-    </section>
-  </div>
+    <section id="hotels"></section>
+  <!-- </div> -->
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="main.js"></script>
