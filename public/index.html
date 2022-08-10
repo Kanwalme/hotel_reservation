@@ -1,83 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Hotel Reservation</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Hotel Reservation</title>
 </head>
 
 <body>
 
-    <div class="topnav">
-        <!-- Navbar -->
-        <!-- logo created on https://www.freelogodesign.org/ -->
-        <img class="logo" src="restInnLogo.png">
-        <a class="active" href="#login">Login</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-    </div>
+  <div class="topnav">
+    <!-- Navbar -->
+    <!-- logo created on https://www.freelogodesign.org/ -->
+    <img class="logo" src="restInnLogo.png">
+    <a class="active" href="#login">Login</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="/reservation">Reservations</a>
+  </div>
 
-    <div class="heading">
-        <main>
-            <form>
-                <div class="custom-select" style="width: 200px;"">
+  <div class="heading">
+    <main>
+      <form action="javascript:submitForm(event)">
+        <div class="custom-select" style="width: 200px;"">
                     <p>Choose a location:</p>
-                    <select name="location" id="name">
-                        <option value="1" selected>Las Vegas, NV</option>
-                        <option value="2">Big Sur, CA</option>
-                        <option value="3">Vail, CO</option>
-                        <option value="4">Washington, CT</option>
-                        <option value="5">Sea Island, GA</option>
-                        <option value="6">Coeur d'Alene, ID</option>
-                        <option value="7">Davenport, IA</option>
-                        <option value="8">New Orleans, LA</option>
-                        <option value="9">Santa Fe, NM</option>
-                    </select>
-                </div>
-                <p>Check In:</p>
-                <input type="date" id="checkIn" name="checkIn" value="2022-08-04" min="2022-01-01" max="2022-12-31">
-                <p>Check Out:</p>
-                <input type="date" id="checkOut" name="checkOut" value="2022-08-04" min="2022-01-01" max="2022-12-31">
-                <p>Number of Guests</p>
-                <select name="guests">
-                    <option value="1" selected>1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-                <button id="btnSearch">Search</button>
-            
-<header>
-    
-</header>
+          <select name='location' id=" name">
+          <option value="0" selected>Las Vegas, NV</option>
+          <option value="1">Big Sur, CA</option>
+          <option value="2">Vail, CO</option>
+          <option value="3">Washington, CT</option>
+          <option value="4">Sea Island, GA</option>
+          <option value="5">Coeur d'Alene, ID</option>
+          <option value="6">Davenport, IA</option>
+          <option value="7">New Orleans, LA</option>
+          <option value="8">Santa Fe, NM</option>
+          </select>
+        </div>
+        <p>Check In:</p>
+        <input type="date" id="checkIn" name="checkIn" value="2022-08-04" min="2022-01-01" max="2022-12-31">
+        <p>Check Out:</p>
+        <input type="date" id="checkOut" name="checkOut" value="2022-08-04" min="2022-01-01" max="2022-12-31">
+        <p>Number of Guests</p>
+        <select name="guests">
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <button id="btnSearch" type="submit">Search</button>
 
-<section>
-    
-</section>
-            </form>   
+        </h1>
+      </form>
 
+    </main>
 
-        </main>
-     
-    </div> 
-   
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="main.js"></script>
+    <section>
+      <div id="hotels"></div>
+    </section>
+  </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="main.js"></script>
 </body>
-
 
 </div>
 

@@ -27,7 +27,7 @@
     },
     {
       "id": 5,
-      "address": "Sea Island, GA",
+      "location": "Sea Island, GA",
       "pricePernight": 500,
       "imageURL": "https://i.insider.com/548626a069bedd1926e3dc48?width=700&format=jpeg&auto=webp"
     },
@@ -39,7 +39,7 @@
     },
     {
       "id": 7,
-      "address": "Davenport, IA",
+      "location": "Davenport, IA",
       "pricePernight": 169,
       "imageURL": "https://i.insider.com/5486271969bedd9c2ae3dc47?width=700&format=jpeg&auto=webp"
     },
@@ -57,3 +57,4 @@
     }
   ]
 }
+
