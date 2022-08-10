@@ -21,11 +21,14 @@
     <a href="/reservation">Reservations</a>
     <a href="http://localhost:4004">Home Page</a>
   </div>
-
-  <!-- <div class="reservationForm"> -->
+<!-- <div> <section style= "text-align: right" id="hotels"></section></div> -->
+<section style= "text-align: right" id="hotels"></section>
+  <div class="reservationForm">
     <main>
-      <form action="javascript:submitForm(event)">
-        <div class="custom-select">
+      <form  style="text-align: left; float:left"  action="javascript:submitForm(event)" class="center">
+        <div> <section style= "text-align: left" id="hotels"></section></div> 
+
+        <div class="custom-select" class="center">
                     <p>Choose a location:</p>
           <select name='location' id=" name">
           <option value="0" selected>Las Vegas, NV</option>
@@ -53,12 +56,13 @@
         <br>
         <button id="btnSearch" type="submit">Search</button>
 
+        <!-- <section style= "text-align: right" id="hotels"></section> -->
+
       </form>
 
     </main>
 
-    <section id="hotels"></section>
-  <!-- </div> -->
+  </div>
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="main.js"></script>
