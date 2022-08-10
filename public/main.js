@@ -14,18 +14,20 @@ function populateHotels(hotel) {
   const myBreakLine = document.createElement('br')
   const reserveButton = document.createElement('button')
 
-  hotelId.textContent = hotel.id
-  hotelLocation.textContent = `Location: ${hotel.location}`
-  price.textContent = `Price per Night: ${hotel.pricePernight}`
+  // hotelId.textContent = hotel.id
+  
   hotelImg.src = hotel.imageURL
+  hotelLocation.textContent = `Location: ${hotel.location}`
+  price.textContent = `Price per Night: $${hotel.pricePernight}`
   reserveButton.id = hotel.id
   reserveButton.classList.add('ReserveNowButton')
   reserveButton.textContent = 'Reserve Now'
 
+ 
+  selectedHotel.appendChild(hotelImg)
   selectedHotel.appendChild(hotelId)
   selectedHotel.appendChild(hotelLocation)
   selectedHotel.appendChild(price)
-  selectedHotel.appendChild(hotelImg)
   selectedHotel.appendChild(myBreakLine)
   selectedHotel.appendChild(reserveButton)
   section.appendChild(selectedHotel)

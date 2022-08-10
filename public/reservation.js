@@ -24,7 +24,7 @@ document.addEventListener(
             name: 'checkout',
             value: 'reservation.checkOut'
           },
-          { name: 'price', value: 'reservation.price' }
+          { name: 'price', value:'"$" +reservation.price' }
         ]
         dataAttrs.forEach(({ name, value }) => {
           const mytd = document.createElement('td')
