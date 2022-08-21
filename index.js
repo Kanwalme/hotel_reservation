@@ -11,7 +11,6 @@ app.use(cors())
 app.use(express.static('public'))
 
 const {
-  getHotels,
   searchHotels,
   createReservation,
   getReservation,
