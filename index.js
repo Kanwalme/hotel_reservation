@@ -29,6 +29,4 @@ app.get('/api/reservation', getReservation)
 
 app.delete('/api/reservation/:id', deleteReservation)
 
-app.get(`/api/hotels`, getHotels)
-
 app.listen(4004, () => console.log(`Your app is running on 4004`))
