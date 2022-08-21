@@ -1,12 +1,14 @@
+
 document.addEventListener(
-    'DOMContentLoaded',
-    async function () {
+    'DOMContentLoaded', 
+    async function () {  
       const table = document.querySelector('table')
       const { data } = await axios({
         method: 'get',
         url: 'http://localhost:4004/api/reservation',
         headers: { 'Content-Type': 'application/json' }
       })
+
       console.log(data)
       data.forEach(reservation => {
         const tableContents = document.createElement('tr')
@@ -45,7 +47,7 @@ document.addEventListener(
   )
   
   async function deleteReservation (event) {
-    const { id } = event.target
+    const { id } = event.target 
     const { data } = await axios({
       method: 'delete',
       url: `http://localhost:4004/api/reservation/${id}`,
