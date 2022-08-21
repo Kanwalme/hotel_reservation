@@ -3,7 +3,6 @@ let globalId = 0
 const reservations = []
 
 module.exports = {
-  getHotels: (req, res) => res.status(200).send(hotels),
  
   searchHotels: (req, res) => {
     res.json(hotels.destinations[req.body.location])
