@@ -27,7 +27,6 @@ function populateHotels(hotel) {
   selectedHotel.appendChild(reserveButton)
   section.appendChild(selectedHotel)
 
-  //adding event listener once reserve now button has been clicked, to call reserveNow function.
   const elements = document.getElementsByClassName('ReserveNowButton')
   for (var i = 0; i < elements.length; i++) {
     elements[i].addEventListener('click', reserveNow, false)
